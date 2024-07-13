@@ -24,7 +24,7 @@ jobs:
       env:
         PRIVATE_KEY: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
         HOST: ${{ secrets.EC2_HOST }}
-        USER: ec2-user  # or your EC2 instance's user
+        USER: ubuntu  # or your EC2 instance's user
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
       run: |
         echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
