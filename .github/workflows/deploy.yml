@@ -27,7 +27,7 @@ jobs:
         USER: ubuntu  # or your EC2 instance's user
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
       run: |
-        echo "$PRIVATE_KEY" > private_key && chmod 777 private_key
+        echo "$PRIVATE_KEY" > private_key && chmod 0777 private_key
         scp -i private_key -o StrictHostKeyChecking=no docker-compose.yml $USER@$HOST:/home/$USER/
         ssh -i private_key -o StrictHostKeyChecking=no $USER@$HOST '
           docker-compose down
