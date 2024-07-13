@@ -31,7 +31,7 @@ Before you begin, make sure you have the following installed:
 2. **Build and Run Docker Containers:**
     Use Docker Compose to build and run all containers:
     ```bash
-    docker-compose up -d
+    sudo DB_PASSWORD=your_password docker-compose up
     ```
 
 3. **Access the Application:**
